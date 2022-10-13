@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligatorio 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <header id="">
+        <a href="index.html"><img id="logo" src="img/pokemon-logo.png" alt=""></a>
+
+        <nav class="navMenu">
+            <a href="#section1">Listados</a>
+            <a href="#section3">Compañero</a>
+            <a href="#section5">Evoluciones</a>
+            <a href="#section4">¿Quién es ese Pokémon?</a>
+
+        </nav>
+    </header>
+
+    <!----------------------------------------------------------------------------------->
+
+    <section id="section0">
+        <img class="banner1" src="img/banner1.png" title="Japón en 1996, creado para las consolas Game Boy" />
+        <div id="color1"></div>
+
+        <img class="banner2" src="img/banner2.png"
+            title="Creado por Satoshi Tajiri, Ken Sugimori, Game Freak y Nintendo" />
+        <div id="color2"></div>
+
+        <img class="banner3" src="img/banner3.png" title="Pocket Monsters Rojo y Verde" />
+        <div id="color3"></div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------->
+
+    <section id="section1">
+
+        <div class="form">
+
+            <div>
+                <select name="" id="select_generacion">
+                    <option value="listarTodas">Pag. Principal</option>
+                    <option value="primeraGeneracion">Pag. Primera Generacion</option>
+                    <option value="segundaGeneracion">Pag. Segunda Generacion</option>
+                    <option value="terceraGeneracion">Pag. Tercera Generacion</option>
+                    <option value="cuartaGeneracion">Pag. Cuarta Generacion</option>
+                    <option value="quintaGeneracion">Pag. Quinta Generacion</option>
+                    <option value="sextaGeneracion">Pag. Sexta Generacion</option>
+                    <option value="septimaGeneracion">Pag. Septima Generacion</option>
+                    <option value="octavaGeneracion">Pag. Octava Generacion</option>
+                </select>
+            </div>
+
+            <input id="buscar" type="text" name="pokemon" placeholder="Busca un Pokémon por su nombre o número."
+                autocomplete="off">
+            <button id="busqueda" type="button">BUSCAR</button>
+
+        </div>
+
+        <div id="resultados"></div>
+
+        <div id="botones"></div>
+
+        <span id="curiosidades1" class="material-symbols-outlined">info</span>
+
+        <div id="infoCuriosidad1">
+            <div id="contenedorInfoCuriosidad1">
+                <h1>Generaciones Pokémon</h1>
+                <p>Una generación (Generation en inglés) es denominada un conjunto de videojuegos dentro de la
+                    franquicia Pokémon que introduce nuevas especies Pokémon.</p>
+
+                <p>Estos nuevos juegos no solo conllevan una
+                    actualización de la lista de Pokémon, sino también novedades en la mecánica y la historia de los
+                    videojuegos, como la aparición de una nueva región donde se desarrolla la aventura. La inauguración
+                    de una generación suele deberse al lanzamiento de una nueva consola portátil de Nintendo, aunque no
+                    siempre ha sido así.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------->
+
+    <div id="pestaniaModalError">
+        <div id="msjError">
+
+            <div id="card" class="poke-card">
+
+                <div id="titulo">Pokebrowser</div>
+                <div id="cerrarMsjError">X</div>
+
+                <div id="">
+                    <img class="poke-img" src="img/poke-shadow.png" />
+                </div>
+
+                <div id="types" class="poke-types"></div>
+
+                <div id="muestra"></div>
+
+                <div id="descripcion"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------->
+
+    <section id="section3">
+
+        <img id="companiero" src="img/companieroIntro.svg" />
+
+        <div id="contenedorCompaniero">
+
+            <div id="compañero">
+                <div style="padding-right: 2em;">
+                    <div id="nombreIdpokemon"></div>
+                    <img class="img-compañero" src="img/poke-shadow.png" />
+                </div>
+                <div>
+                    <div id="conpanieroInfoMuestra"></div>
+                    <div id="companieroTypesMuestra" class="poke-types"></div>
+                </div>
+            </div>
+
+            <div class="form2">
+                <div>
+                    <label for="diaNacimiento">Ingresa tu día de nacimiento: </label>
+                    <input id="diaNacimiento" type="text" name="diaNacimiento" autocomplete="off"
+                        placeholder="Solamente valores numéricos">
+                    <p id="errorDia" style="color: red;"></p>
+                </div>
+                <br>
+                <div>
+                    <label for="mesNacimiento">Ingresa tu mes de nacimiento: </label>
+                    <input id="mesNacimiento" type="text" name="mesNacimiento" autocomplete="off"
+                        placeholder="Solamente valores numéricos">
+                    <p id="errorMes" style="color: red;"></p>
+                </div>
+                <br>
+                <div>
+                    <label for="nombreUsuario">Ingresa tu nombre: </label>
+                    <input id="nombreUsuario" type="text" name="nombreUsuario" autocomplete="off"
+                        placeholder="No se permiten valores numéricos">
+                    <p id="errorNombre" style="color: red;"></p>
+                </div>
+                <p id="errorGeneral" style="color: red;"></p>
+                <br>
+                <button id="btnEncontrar" type="button">ENCONTRAR COMPAÑERO</button>
+            </div>
+        </div>
+
+        <span id="curiosidades2" class="material-symbols-outlined">info</span>
+
+        <div id="infoCuriosidad2">
+            <div id="contenedorInfoCuriosidad2">
+                <h1>Acompañante Pokémon</h1>
+                <p>Un acompañante Pokémon (Walking Pokémon en inglés) es aquel Pokémon que, en lugar de permanecer en el
+                    interior de su Poké Ball como la mayoría de los Pokémon, acompaña al entrenador fuera de aquella.
+                </p>
+
+                <p>No ha sido una característica regular en los videojuegos, solo estando presente en unos pocos y no
+                    completamente. En el anime, por el contrario, desde el comienzo de la serie se han dado algunos
+                    ejemplos, siendo el más conocido el de Ash Ketchum y Pikachu.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------->
+
+    <section id="section5">
+
+        <div class="form">
+
+            <input id="buscarEvolucion" type="text" name="pokemon"
+                placeholder="Busca una evolucion, ejemplo Machop, Gastly, Ralts, Lotad..." autocomplete="off">
+            <button id="busquedaEvolucion" type="button">BUSCAR EVOLUCIÓN</button>
+            <p id="errorMensaje" style="color: red;"></p>
+        </div>
+        <div id="contenedorEvolucines">
+            <div id="cont1">
+                <img class="img-evolucion1" src="img/poke-shadow.png" />
+                <div id="nombreIdpokemon1"></div>
+            </div>
+            <div id="cont2">
+                <img class="img-evolucion2" src="img/poke-shadow.png" />
+                <div id="nombreIdpokemon2"></div>
+            </div>
+            <div id="cont3">
+                <img class="img-evolucion3" src="img/poke-shadow.png" />
+                <div id="nombreIdpokemon3"></div>
+
+            </div>
+        </div>
+
+        <span id="curiosidades4" class="material-symbols-outlined">info</span>
+
+        <div id="infoCuriosidad4">
+            <div id="contenedorInfoCuriosidad4">
+                <h1>Evolución</h1>
+                <p>La evolución (Evolution en inglés) es una fase por la que pasan la mayoría de
+                    los Pokémon durante su crecimiento y entrenamiento.</p>
+                <p>Los animales crecen y se desarrollan cambiando
+                    algunas de sus características, a los Pokémon les pasa igual, pero sus cambios son por lo general
+                    mucho más pronunciados.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------->
+
+    <section id="section4">
+
+        <div class="position">
+            <div id="ocultarImagen"></div>
+            <img class="image-dark" src="img/poke-shadow.png" style="filter: brightness(0) invert(0);" />
+
+            <div id="mensajeGanador"></div>
+
+            <div id="adivinaContenedor">
+                <button id="recargarEnviar" type="button" style="margin-right: 2em;"><span
+                        class="material-symbols-outlined">
+                        refresh
+                    </span></button>
+                <input id="adivina" type="text" name="pokemon" autocomplete="off" placeholder="Nombre Pokémon">
+                <button id="adivinaEnviar" type="button">ENVIAR</button>
+                <div id="mensajeAyuda"></div>
+            </div>
+        </div>
+
+        <span id="curiosidades3" class="material-symbols-outlined">info</span>
+
+        <div id="infoCuriosidad3">
+            <div id="contenedorInfoCuriosidad3">
+                <h1>Who's that Pokémon?</h1>
+                <p>¿Quién es ese Pokémon? (en Hispanoamérica) o ¿Cuál es este Pokémon? (en España), es una sección que
+                    se suele incluir en los episodios del anime
+                    donde se realiza una pregunta en la que se debe averiguar a qué Pokémon corresponde una silueta.</p>
+                <p>La pregunta aparece a mitad del episodio, normalmente antes de la publicidad, y la respuesta se da
+                    normalmente después de la publicidad.
+                    En la versión japonesa, y en las posteriores ediciones para otros países en los episodios de las
+                    primera y segunda temporadas, el Pokémon que se muestra es el que tiene un mayor rol en el episodio.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------->
+
+    <footer>
+        <p>©2022 Pokémon. ©1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+
+</body>
+
+</html>
